@@ -1,0 +1,39 @@
+CREATE DATABASE finance_dashboard;
+USE finance_dashboard;
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE
+    -- Add more fields as needed
+);
+CREATE TABLE income (
+    income_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    title VARCHAR(100) NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    date DATE NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    -- Add more fields as needed
+);
+CREATE TABLE expenses (
+    expense_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    title VARCHAR(100) NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    date DATE NOT NULL,
+    category VARCHAR(50) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    -- Add more fields as needed
+);
+CREATE TABLE transactions (
+    transaction_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    title VARCHAR(100) NOT NULL,
+    type VARCHAR(50) NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    date DATE NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+

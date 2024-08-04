@@ -1,0 +1,96 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  color: #fff;
+}
+
+.sidebar .profile {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #555;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+}
+
+.sidebar ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #555;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .content {
+    margin-left: 0;
+  }
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  background-color: #45a049;
+  display: block;
+}
